@@ -1,0 +1,14 @@
+[Unit]
+Description=presenza
+After = url.service
+
+[Service]
+ExecStart=/usr/bin/python3 -u presenza.py
+WorkingDirectory=/home/pi/Desktop/homer
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
